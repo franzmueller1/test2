@@ -35,7 +35,7 @@ st.sidebar.header('Car Input Parameters')
 def user_input_features():
 	engine_size = st.sidebar.slider("min. enginesize", 40, 200, 40)
 	fuel_type = st.sidebar.selectbox("Which fuel type", df["fueltype"].unique())
-	horse_power = st.sidebar.slider("min. horsepower", 50, 200, 40)
+	horse_power = st.sidebar.slider("min. horsepower", 40, 200, 40)
 	data = {'engine_size' : engine_size, 'fuel_type': fuel_type, 'horse_power': horse_power}
 	features = pd.DataFrame(data, index=[0])
 	return features
